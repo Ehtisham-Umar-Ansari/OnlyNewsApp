@@ -7,7 +7,6 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
-import com.example.mymeme.mySingleton
 import com.example.onlynewsapp.databinding.ActivityMainBinding
 
 
@@ -58,7 +57,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
             }
         }
 
-        mySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
 
     override fun onItemClicked(item: News) {
